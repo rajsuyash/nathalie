@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Portfolio() {
+  const { t } = useLanguage();
+
   return (
     <main className="pt-32 pb-20">
       <header className="max-w-7xl mx-auto px-8 mb-20">
         <span className="text-secondary text-xs uppercase tracking-widest font-label mb-4 block">
-          Selected Works
+          {t('portfolio.label')}
         </span>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface max-w-4xl leading-tight">
-          Sculpting the <span className="text-primary italic">living</span> environment.
+          {t('portfolio.title1')}<span className="text-primary italic">{t('portfolio.title.highlight')}</span> environment.
         </h1>
         <div className="mt-12 ml-0 md:ml-32 max-w-xl">
           <p className="text-on-surface-variant text-lg leading-relaxed font-body">
-            Our portfolio is a testament to the intersection of botanical science and
-            architectural precision. Explore our curated selection of transformed landscapes.
+            {t('portfolio.desc')}
           </p>
         </div>
       </header>
@@ -29,10 +31,10 @@ export default function Portfolio() {
               />
               <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-primary/40 to-transparent">
                 <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-2 block font-label">
-                  Residential — 2023
+                  {t('portfolio.project1.label')}
                 </span>
                 <h3 className="text-on-primary text-3xl font-bold tracking-tight">
-                  The Brutalist Grove
+                  {t('portfolio.project1.title')}
                 </h3>
               </div>
             </div>
@@ -47,10 +49,10 @@ export default function Portfolio() {
               />
               <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-primary/40 to-transparent">
                 <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-1 block font-label">
-                  Courtyard
+                  {t('portfolio.project2.label')}
                 </span>
                 <h3 className="text-on-primary text-xl font-bold tracking-tight">
-                  Stone &amp; Solace
+                  {t('portfolio.project2.title')}
                 </h3>
               </div>
             </div>
@@ -65,10 +67,10 @@ export default function Portfolio() {
               />
               <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-primary/40 to-transparent">
                 <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-1 block font-label">
-                  Ecological
+                  {t('portfolio.project3.label')}
                 </span>
                 <h3 className="text-on-primary text-xl font-bold tracking-tight">
-                  Wild Perennials
+                  {t('portfolio.project3.title')}
                 </h3>
               </div>
             </div>
@@ -83,10 +85,10 @@ export default function Portfolio() {
               />
               <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-primary/40 to-transparent">
                 <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-2 block font-label">
-                  Estate — 2024
+                  {t('portfolio.project4.label')}
                 </span>
                 <h3 className="text-on-primary text-3xl font-bold tracking-tight">
-                  The Horizon Terrace
+                  {t('portfolio.project4.title')}
                 </h3>
               </div>
             </div>
@@ -107,40 +109,37 @@ export default function Portfolio() {
 
             <div className="p-12 md:p-20 flex flex-col justify-center">
               <span className="text-secondary text-xs uppercase tracking-widest font-label mb-6 block">
-                Project Focus
+                {t('portfolio.focus.label')}
               </span>
               <h2 className="text-4xl font-extrabold tracking-tight text-on-surface mb-8">
-                The Brutalist Grove
+                {t('portfolio.focus.title')}
               </h2>
               <div className="space-y-6">
                 <p className="text-on-surface-variant font-body leading-relaxed">
-                  A conversion of a derelict industrial lot into a private sanctuary. We
-                  utilized raw concrete forms to frame high-contrast botanical textures—pairing
-                  the softness of ostrich ferns with the rigidity of custom-poured limestone
-                  basins.
+                  {t('portfolio.focus.desc')}
                 </p>
                 <div className="pt-8 grid grid-cols-2 gap-8">
                   <div>
                     <span className="text-on-surface font-semibold text-sm block mb-1">
-                      Flora
+                      {t('portfolio.focus.flora')}
                     </span>
                     <p className="text-on-surface-variant text-sm">
-                      Matte Pinus, Dicksonia, Moss
+                      {t('portfolio.focus.flora.desc')}
                     </p>
                   </div>
                   <div>
                     <span className="text-on-surface font-semibold text-sm block mb-1">
-                      Materials
+                      {t('portfolio.focus.materials')}
                     </span>
                     <p className="text-on-surface-variant text-sm">
-                      Board-form Concrete, Basalt
+                      {t('portfolio.focus.materials.desc')}
                     </p>
                   </div>
                 </div>
                 <div className="pt-10">
                   <button className="flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all duration-300">
                     <span className="text-xs uppercase tracking-widest font-label">
-                      View Full Case Study
+                      {t('portfolio.focus.cta')}
                     </span>
                     <span className="material-symbols-outlined text-lg">arrow_forward</span>
                   </button>
@@ -153,17 +152,16 @@ export default function Portfolio() {
 
       <section className="mt-40 bg-primary py-24 px-8 text-center">
         <h2 className="text-on-primary text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
-          Your landscape is an unwritten story.
+          {t('portfolio.cta.title')}
         </h2>
         <p className="text-on-primary-container max-w-xl mx-auto mb-12 text-lg">
-          Let us curate the next chapter of your outdoor experience. Bespoke designs tailored to
-          your architectural intent.
+          {t('portfolio.cta.desc')}
         </p>
         <Link
           to="/contact"
           className="inline-block bg-secondary-container text-on-secondary-container px-10 py-4 rounded-sm font-label text-xs uppercase tracking-widest hover:bg-on-secondary transition-colors duration-300"
         >
-          Begin Consultation
+          {t('portfolio.cta.button')}
         </Link>
       </section>
     </main>

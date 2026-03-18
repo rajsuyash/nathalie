@@ -166,7 +166,7 @@ export default function Home() {
               <img
                 alt="Nathalie Flusin in her garden"
                 className="w-full h-full object-cover"
-                src="/PastedGraphic-1.pdf"
+                src="/nath.jpg"
               />
             </div>
             <div className="absolute -bottom-10 -right-10 bg-primary text-on-primary p-10 hidden lg:block rounded-sm max-w-xs">
