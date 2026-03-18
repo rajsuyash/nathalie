@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <main>
       <section className="relative min-h-screen flex items-center overflow-hidden bg-surface">
@@ -18,26 +21,26 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-8 w-full pt-20">
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-widest text-secondary font-medium mb-4 block">
-              Garden Consulting
+              {t('services.label')}
             </span>
             <h1 className="text-6xl md:text-8xl font-extrabold text-on-surface leading-[0.95] tracking-tighter mb-8">
-              Craft Your <br /> <span className="text-primary">Garden.</span>
+              {t('hero.title')} <br /> <span className="text-primary">{t('hero.title.highlight')}</span>
             </h1>
             <p className="text-lg text-on-surface-variant max-w-lg mb-12 font-light leading-relaxed">
-              Personalized consulting to help you transform your garden into a thriving, ecological sanctuary. Learn the right techniques and become the craftsman of your corner of nature.
+              {t('hero.subtitle')}
             </p>
             <div className="flex items-center space-x-8">
               <Link
                 to="/portfolio"
                 className="bg-primary text-on-primary px-10 py-4 rounded-sm text-sm uppercase tracking-widest font-bold shadow-2xl shadow-primary/20 hover:translate-y-[-2px] transition-all"
               >
-                View Portfolio
+                {t('hero.cta.portfolio')}
               </Link>
               <Link
                 to="/contact"
                 className="group flex items-center space-x-2 text-primary font-semibold tracking-wide"
               >
-                <span className="text-sm uppercase tracking-widest">Inquiry</span>
+                <span className="text-sm uppercase tracking-widest">{t('hero.cta.inquiry')}</span>
                 <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
                   arrow_forward
                 </span>
@@ -61,11 +64,11 @@ export default function Home() {
           <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-xl">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-on-surface mb-6">
-                What You'll <br /> Learn & Achieve
+                {t('home.what.title')} <br /> {t('home.what.title2')}
               </h2>
             </div>
             <p className="text-sm uppercase tracking-widest text-secondary font-bold border-b border-secondary/20 pb-2">
-              Consulting Services
+              {t('home.what.subtitle')}
             </p>
           </div>
 
@@ -74,9 +77,9 @@ export default function Home() {
               <span className="text-4xl font-headline font-extrabold mb-8 block opacity-20 group-hover:opacity-100 transition-opacity">
                 01
               </span>
-              <h3 className="text-2xl font-bold mb-6 tracking-tight">Garden Revival</h3>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service1.title')}</h3>
               <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
-                Increase planting density, add vibrant color, harmonize flowerbeds, and create a garden that evolves beautifully through the seasons.
+                {t('home.service1.desc')}
               </p>
               <span className="material-symbols-outlined text-4xl">park</span>
             </div>
@@ -85,9 +88,9 @@ export default function Home() {
               <span className="text-4xl font-headline font-extrabold mb-8 block opacity-20 group-hover:opacity-100 transition-opacity">
                 02
               </span>
-              <h3 className="text-2xl font-bold mb-6 tracking-tight">Thriving Ecosystem</h3>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service2.title')}</h3>
               <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
-                Learn to nourish your soil, discover optimal plant combinations, and master gardening techniques for easier, sustainable maintenance.
+                {t('home.service2.desc')}
               </p>
               <span className="material-symbols-outlined text-4xl">compost</span>
             </div>
@@ -96,9 +99,9 @@ export default function Home() {
               <span className="text-4xl font-headline font-extrabold mb-8 block opacity-20 group-hover:opacity-100 transition-opacity">
                 03
               </span>
-              <h3 className="text-2xl font-bold mb-6 tracking-tight">Ecological Living</h3>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service3.title')}</h3>
               <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
-                Embrace biodiversity and natural products to create a garden that supports local ecosystems and thrives in harmony with nature.
+                {t('home.service3.desc')}
               </p>
               <span className="material-symbols-outlined text-4xl">eco</span>
             </div>
@@ -109,11 +112,11 @@ export default function Home() {
       <section className="py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex items-center justify-between mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter">Recent Commissions</h2>
+            <h2 className="text-3xl font-bold tracking-tighter">{t('home.recent.title')}</h2>
             <div className="flex items-center space-x-4">
               <div className="h-[2px] w-24 bg-surface-container-highest"></div>
               <span className="text-xs uppercase tracking-widest font-bold text-secondary">
-                A Curated Archive
+                {t('home.recent.subtitle')}
               </span>
             </div>
           </div>
@@ -159,11 +162,11 @@ export default function Home() {
       <section className="py-32 bg-surface-container relative">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-20">
           <div className="w-full md:w-1/2 relative">
-            <div className="aspect-[4/5] bg-surface-container-highest rounded-sm overflow-hidden shadow-2xl">
+            <div className="aspect-[3/4] bg-surface-container-highest rounded-sm overflow-hidden shadow-2xl">
               <img
-                alt="Founder at work"
-                className="w-full h-full object-cover grayscale sepia-[.2]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOnvRx5dCr0NoJiSfGAKmuFBHRNOfmdTI_hTc0wB8oVpRr6wR2r-j2D5KZqsbNw2IBM_E7vpIHQ7bNS6JMo_UwZNC38Sj86PZaYCZQkgoohGkgwYq2zuqlWGFSIZy4EyrfOAc7HwjA4FNwjVoDuhoX6F2wv9EN6j9ic95eHNH5YkD1U8qGsGSvvA9qHrIXzI6hAVitvlKbBjeFngiJ6z3uDlM3G9zCqFM23m8Cy3BKEtVs5q8LdPiLG5yCALeAYTE5WpyG7BexQt4"
+                alt="Nathalie Flusin in her garden"
+                className="w-full h-full object-cover"
+                src="/PastedGraphic-1.pdf"
               />
             </div>
             <div className="absolute -bottom-10 -right-10 bg-primary text-on-primary p-10 hidden lg:block rounded-sm max-w-xs">
@@ -175,23 +178,23 @@ export default function Home() {
 
           <div className="w-full md:w-1/2">
             <span className="text-xs uppercase tracking-widest text-secondary font-bold mb-6 block">
-              About Nathalie
+              {t('home.about.label')}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8 leading-tight">
-              Your Guide to Garden <span className="text-primary italic">Mastery</span>.
+              {t('home.about.title')} <span className="text-primary italic">{t('home.about.title.highlight')}</span>{t('home.about.title2')}
             </h2>
             <p className="text-lg text-on-surface-variant font-light leading-relaxed mb-10">
-              Landscape gardener passionate about helping you become the craftsman of your own corner of nature. Trained at the prestigious Higher School of Landscape Architecture of Versailles (ENSP), I share my expertise to help you create and maintain a garden that reflects your vision.
+              {t('home.about.desc')}
             </p>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                 <div>
                   <h4 className="font-bold text-sm uppercase tracking-wider">
-                    Personalized Learning
+                    {t('home.about.feature1.title')}
                   </h4>
                   <p className="text-sm text-on-surface-variant">
-                    From creation to maintenance, learn the right techniques, combinations, and harmony for your unique space.
+                    {t('home.about.feature1.desc')}
                   </p>
                 </div>
               </div>
@@ -199,10 +202,10 @@ export default function Home() {
                 <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                 <div>
                   <h4 className="font-bold text-sm uppercase tracking-wider">
-                    Practical Expertise
+                    {t('home.about.feature2.title')}
                   </h4>
                   <p className="text-sm text-on-surface-variant">
-                    Hands-on guidance for construction planning, terrace design, and creating welcoming outdoor spaces.
+                    {t('home.about.feature2.desc')}
                   </p>
                 </div>
               </div>
@@ -214,26 +217,26 @@ export default function Home() {
       <section className="py-24 bg-primary text-on-primary">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">
-            Begin Your Garden Transformation
+            {t('home.cta.title')}
           </h2>
           <p className="text-on-primary/70 text-lg mb-4 max-w-2xl mx-auto font-light">
-            Book a personalized consulting session and learn to create the garden of your dreams.
+            {t('home.cta.desc')}
           </p>
           <p className="text-on-primary/90 text-xl mb-12 font-semibold">
-            €80/hour • 3-hour package: €210
+            {t('home.cta.pricing')}
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <Link
               to="/contact"
               className="inline-block bg-secondary-container text-on-secondary-container px-12 py-5 rounded-sm text-sm uppercase tracking-[0.2em] font-extrabold hover:bg-white transition-colors"
             >
-              Request a Consultation
+              {t('home.cta.button1')}
             </Link>
             <a
               href="mailto:nathalieflusin@orange.fr"
               className="inline-block bg-transparent border-2 border-on-primary text-on-primary px-12 py-5 rounded-sm text-sm uppercase tracking-[0.2em] font-extrabold hover:bg-on-primary hover:text-primary transition-colors"
             >
-              Email Nathalie
+              {t('home.cta.button2')}
             </a>
           </div>
         </div>
