@@ -1,0 +1,171 @@
+import { Link } from 'react-router-dom';
+
+export default function Portfolio() {
+  return (
+    <main className="pt-32 pb-20">
+      <header className="max-w-7xl mx-auto px-8 mb-20">
+        <span className="text-secondary text-xs uppercase tracking-widest font-label mb-4 block">
+          Selected Works
+        </span>
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface max-w-4xl leading-tight">
+          Sculpting the <span className="text-primary italic">living</span> environment.
+        </h1>
+        <div className="mt-12 ml-0 md:ml-32 max-w-xl">
+          <p className="text-on-surface-variant text-lg leading-relaxed font-body">
+            Our portfolio is a testament to the intersection of botanical science and
+            architectural precision. Explore our curated selection of transformed landscapes.
+          </p>
+        </div>
+      </header>
+
+      <section className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="md:col-span-8 group cursor-pointer">
+            <div className="relative overflow-hidden rounded-md aspect-[16/10] bg-surface-container-low transition-all duration-500 group-hover:bg-surface-container">
+              <img
+                className="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMjuIqDc3MtHEw0XTxWQhFU12fTgclHW8CKnW4u8KHAg07pAU1jTsi6ZUw8LTH9xLU-CEfridpeue1tOgpkvWcu8pLbG2O_7LcFSYNsXPrU0r8mWjD5SUQLbGWrrBzxSYt8cip56igBuW20vl64ZBEsalb5YNlfXyTPaqEGY0RmrCEcV4E5vSqknwdvZw9dVoss85jWEb0d5AS9Jyfv6tRsnSAzR3Ig3mdaAGeQ4BDfuB9ITa3KMcbNeppopws1xyqdqJxNwK10k"
+                alt="Modern geometric garden with concrete paths and lush ferns"
+              />
+              <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-primary/40 to-transparent">
+                <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-2 block font-label">
+                  Residential — 2023
+                </span>
+                <h3 className="text-on-primary text-3xl font-bold tracking-tight">
+                  The Brutalist Grove
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-4 group cursor-pointer">
+            <div className="relative overflow-hidden rounded-md aspect-[4/5] bg-surface-container-low">
+              <img
+                className="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3756nDMQwWhhwGeIaPRgbBGcEKW9Ppj7gBUI1WTSF366tz_2aMKVfUE1ep9wjslIVy5qRp0VuNpNW6YZ7OVnLumpV2f8PFBvo9Usx6fEzObSn-6oWDnGdEfRPMmcBnmzvKf0QLGr4bm6Kt9X2Cq7nT-1JAj8JSUNjuBVyqX8n0alOkIlAoY-dEMamyNzGzbbqJpVzBpkcIuTOTYtNWh9AdSx6j3AxB8TOUiZWLo1ri9EN9PbICgEetwAAFl7p1i0Bgm3vHn1wu_I"
+                alt="Minimalist courtyard with single olive tree and gravel"
+              />
+              <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-primary/40 to-transparent">
+                <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-1 block font-label">
+                  Courtyard
+                </span>
+                <h3 className="text-on-primary text-xl font-bold tracking-tight">
+                  Stone &amp; Solace
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-4 group cursor-pointer">
+            <div className="relative overflow-hidden rounded-md aspect-[1/1] bg-surface-container-low">
+              <img
+                className="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDPBLtyfTkljq_igVBkG0yviCzmmYMtLMRWRenjYm4MbzN4md3_EGm5ilMzzHej3tCqHJPmUYQLOpNpWchH__CHllrSVSZpdGKMqf066K6h8P5wtdIQKki66QBYpII0DvugUYnRbmUkkTUKP2pjGLSA-ioN7WVc5mVPC-RVzlEgDJ5ihmfQ5kawOCRU9rukJ1YgydzWDNtMmJFvxe6qgvBhb-2dWvzpuZCckUtlNMrIEnkwQeEdDM7OJDaldrCYkv54hHwKOxd8-I"
+                alt="Lush wildflower meadow with architectural wooden deck"
+              />
+              <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-primary/40 to-transparent">
+                <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-1 block font-label">
+                  Ecological
+                </span>
+                <h3 className="text-on-primary text-xl font-bold tracking-tight">
+                  Wild Perennials
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-8 group cursor-pointer">
+            <div className="relative overflow-hidden rounded-md aspect-[21/9] bg-surface-container-low">
+              <img
+                className="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW4nk4u0oa8RoN_Edlj10LoFXGJpbPSXo2RjJCbXuidj9nytJVi7s-FiNYLsjFMx-oC3iA-8lwnzS3PsnEoGzXMLmpsuGD0RiJzTBD--jsE74BqBntuXXampXI7ofJPNHm6dAyJymqJqmlrLSTgg8TA6tXPYgCNZEHmToQ_FZwOk_AQdmbzZ5wNeoaYZxiPFqx9BaELR82TBdaZTwix3khvBDENd4MILdZKEvMTZIYEs7fPfRL6n3Ex5-NBndjrK-Wdro2C5_33U8"
+                alt="Infinity edge pool overlooking a terraced pine forest"
+              />
+              <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-primary/40 to-transparent">
+                <span className="text-primary-fixed-dim text-xs uppercase tracking-widest mb-2 block font-label">
+                  Estate — 2024
+                </span>
+                <h3 className="text-on-primary text-3xl font-bold tracking-tight">
+                  The Horizon Terrace
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-8 mt-32">
+        <div className="bg-surface-container-low p-1 rounded-md">
+          <div className="bg-surface-container-lowest grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-sm">
+            <div className="relative h-full min-h-[400px]">
+              <img
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB32JGHccfN_wN-xUNhAwASXM90UOEXviA857yTVMmjvAvyCI04ybBSV1cYWlLMQQOg9ID6DJ38sl3hm0N__t5pV7W9RvOYsxIs0162Lp-dc9q8cCha_-fiO3ZOR4_1eBg_jEMmJVwMXjaAibll9ACjOohSfC5GwcdpXYzxqqN9hiDw2R_Ht8KhcsySiqF95KWoWcER_o5Cpagvh0ptbuyAuTe8N4UM1W0uvcq7mLkIigjNhk6KFiJVtRTGZr2z3eneBgtVcM-7b5U"
+                alt="Close up of structural green planting and limestone walls"
+              />
+            </div>
+
+            <div className="p-12 md:p-20 flex flex-col justify-center">
+              <span className="text-secondary text-xs uppercase tracking-widest font-label mb-6 block">
+                Project Focus
+              </span>
+              <h2 className="text-4xl font-extrabold tracking-tight text-on-surface mb-8">
+                The Brutalist Grove
+              </h2>
+              <div className="space-y-6">
+                <p className="text-on-surface-variant font-body leading-relaxed">
+                  A conversion of a derelict industrial lot into a private sanctuary. We
+                  utilized raw concrete forms to frame high-contrast botanical textures—pairing
+                  the softness of ostrich ferns with the rigidity of custom-poured limestone
+                  basins.
+                </p>
+                <div className="pt-8 grid grid-cols-2 gap-8">
+                  <div>
+                    <span className="text-on-surface font-semibold text-sm block mb-1">
+                      Flora
+                    </span>
+                    <p className="text-on-surface-variant text-sm">
+                      Matte Pinus, Dicksonia, Moss
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-on-surface font-semibold text-sm block mb-1">
+                      Materials
+                    </span>
+                    <p className="text-on-surface-variant text-sm">
+                      Board-form Concrete, Basalt
+                    </p>
+                  </div>
+                </div>
+                <div className="pt-10">
+                  <button className="flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all duration-300">
+                    <span className="text-xs uppercase tracking-widest font-label">
+                      View Full Case Study
+                    </span>
+                    <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-40 bg-primary py-24 px-8 text-center">
+        <h2 className="text-on-primary text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+          Your landscape is an unwritten story.
+        </h2>
+        <p className="text-on-primary-container max-w-xl mx-auto mb-12 text-lg">
+          Let us curate the next chapter of your outdoor experience. Bespoke designs tailored to
+          your architectural intent.
+        </p>
+        <Link
+          to="/contact"
+          className="inline-block bg-secondary-container text-on-secondary-container px-10 py-4 rounded-sm font-label text-xs uppercase tracking-widest hover:bg-on-secondary transition-colors duration-300"
+        >
+          Begin Consultation
+        </Link>
+      </section>
+    </main>
+  );
+}
