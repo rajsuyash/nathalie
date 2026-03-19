@@ -92,7 +92,7 @@ export default function Home() {
               <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
                 {t('home.service2.desc')}
               </p>
-              <span className="material-symbols-outlined text-4xl">compost</span>
+              <span className="material-symbols-outlined text-4xl">construction</span>
             </div>
 
             <div className="group bg-surface-container-lowest p-12 transition-all hover:bg-primary hover:text-on-primary duration-500">
@@ -102,6 +102,28 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service3.title')}</h3>
               <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
                 {t('home.service3.desc')}
+              </p>
+              <span className="material-symbols-outlined text-4xl">deck</span>
+            </div>
+
+            <div className="group bg-surface-container-lowest p-12 transition-all hover:bg-primary hover:text-on-primary duration-500">
+              <span className="text-4xl font-headline font-extrabold mb-8 block opacity-20 group-hover:opacity-100 transition-opacity">
+                04
+              </span>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service4.title')}</h3>
+              <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
+                {t('home.service4.desc')}
+              </p>
+              <span className="material-symbols-outlined text-4xl">compost</span>
+            </div>
+
+            <div className="group bg-surface-container-lowest p-12 transition-all hover:bg-primary hover:text-on-primary duration-500">
+              <span className="text-4xl font-headline font-extrabold mb-8 block opacity-20 group-hover:opacity-100 transition-opacity">
+                05
+              </span>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('home.service5.title')}</h3>
+              <p className="text-on-surface-variant group-hover:text-on-primary/80 mb-10 leading-relaxed font-light">
+                {t('home.service5.desc')}
               </p>
               <span className="material-symbols-outlined text-4xl">eco</span>
             </div>
